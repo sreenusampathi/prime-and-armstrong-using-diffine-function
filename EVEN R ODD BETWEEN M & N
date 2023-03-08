@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main() 
+{
+    int M, N, even_count = 0;
+    printf("Enter the value of M: ");
+    scanf("%d", &M);
+    printf("Enter the value of N: ");
+    scanf("%d", &N);    
+    printf("Odd numbers between M and N are: ");
+	for (int i = M; i <= N; i++) 
+	{
+        if (i % 2 != 0) 
+		{
+            printf("%d ", i);
+        } else {
+            even_count++;
+        }
+    }
+    printf("\nNumber of even numbers between M and N are: %d", even_count);
+    return 0;
+}
