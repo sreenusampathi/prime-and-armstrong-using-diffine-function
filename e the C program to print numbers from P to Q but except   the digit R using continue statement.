@@ -1,0 +1,25 @@
+#include <stdio.h>
+int main() 
+{
+    int p, q, r,i;
+    printf("Enter values for P, Q and R: ");
+    scanf("%d %d %d", &p, &q, &r);
+      for (i = p; i <= q; i++) 
+	{
+        int num = i;
+        while (num != 0) 
+		{
+            int digit = num % 10;
+            if (digit == r) 
+			{
+                // Skip numbers that contain digit R
+                goto skip;
+            }
+            num /= 10;
+        }
+        printf("%d ", i);
+        skip: continue;
+    }
+    printf("\n");
+    return 0;
+}
